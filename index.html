@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercice 4</title>
+  </head>
+  <body>
+    <form>
+	    <label>Nom : </label>
+		  <input type = 'text' name="name" id="name"><hr>
+	    <label>prénom : </label>
+		  <input type = 'text' name="firstName" id="firstName"><hr>
+    	<label>La date de naissance : </label>
+    	<input type = 'text' name="birth" id="birth"><hr>
+    	<label>Le lieu de naissance : </label>
+    	<input type = 'text' name="placeBirth" id="placeBirth"><hr>
+      <label>L'emploi : </label>
+    	<input type = 'text' name="job" id="job"><hr>
+      <label>Votre société : </label>
+    	<input type = 'text' name="enterprise" id="enterprise"><hr>
+    	<label></label><button type = 'submit' >Générer</button>
+  </form>
+  <style>
+    hr{
+      width: 300px;
+      margin-left: 0;
+    }
+  </style>
+  <script src="jquery-3.2.1.js"></script>
+  <script>
+    $(function(){
+      $('button').click(function(){
+        var name = $('#name').val();
+        var firstName = $('#firstName').val();
+        var birth = $('#birth').val();
+        var placeBirth = $('#placeBirth').val();
+        var job = $('#job').val();
+        var enterprise = $('#enterprise').val();
+        alert(name + ' ' + firstName + ', ' + ' né le ' + birth + ' à ' + placeBirth + ', ' + ' actuellement ' + job + ' à ' + enterprise);
+      });
+    });
+  </script>
+  </body>
+</html>
